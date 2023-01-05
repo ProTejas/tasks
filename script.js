@@ -12,6 +12,3 @@ btn.addEventListener("click", function(){
         pera.innerHTML = "Entered input should not be contained special charachters";
     }
 });
-
-
-
