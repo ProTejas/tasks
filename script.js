@@ -1,18 +1,17 @@
 let inputName = document.getElementById('name');
 let btn = document.getElementById('btn');
 let pera = document.getElementById('peraOne');
+let rejex = new RegExp(/[0-9]/g);
+let rejexDigit = new RegExp(/[a-z]/g);
 
 btn.addEventListener("click", function(){
     
-    if(inputName.value === rejex){
-        pera.innerHTML = "Charachter shoulb be less than 10";
+    if(rejex.test(inputName.value) || rejexDigit.test(inputName.value)){
+        console.log(inputName.value);
     }else{
-        pera.innerHTML = inputName.value;
+        pera.innerHTML = "Entered input should not be contained special charachters";
     }
 });
 
-let rejex = /Tejas/g
 
-let text = ["Tejas", "Harishchandra", "Salunke"]
 
- console.log(text.find(rejex));
